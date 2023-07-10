@@ -2,9 +2,21 @@ import * as functions from "./modules/functions.js";
 
 functions.isWebp();
 
-// import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination } from 'swiper';
 
-// const swiper = new Swiper();
+const swiper = new Swiper();
+
+new Swiper(".options__swiper", {
+    grabCursor: true,
+    modules: [Pagination],
+    slidesPerView: 1,
+    spaceBetween:30,
+    watchSlidesProgress: true,
+    pagination:{
+        el: '.options__pagination',
+        clickable: true,
+    },
+}); 
 
 const menu = document.querySelector('.menu')
 const content = document.querySelector('.header__content');
