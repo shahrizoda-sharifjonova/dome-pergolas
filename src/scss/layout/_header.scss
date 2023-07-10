@@ -1,1 +1,323 @@
-// Шапка
+.header{
+    @include res('padding-top', 16px);
+    @include res('padding-bottom', 16px);
+    border-bottom: 0.052vw solid #E5E5EA;
+    @include media(575){
+        @include resa('padding-top', 18px);
+        @include resa('padding-bottom', 18px);
+    }
+    &__nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        color: var(--1, #111);
+        @include res('font-size', 16px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 110%;
+        @include media(575){
+            @include resa('font-size', 16px);
+        }
+        img{
+            @include res('margin-right', 12px);
+            @include res('width', 40px);
+            @include media(575){
+                @include resa('width', 40px);
+                @include resa('margin-right', 12px);
+            }
+        }
+    }
+    .menu{
+        display: none;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        @include resa('width', 24px);
+        @include resa('height', 16px);
+        z-index: 3;
+        @include media(575){
+            display: flex;
+        }
+        &.active{
+            .menu-btn{
+                display: none;
+            }
+            &::before{
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%) rotate(45deg);
+            }
+            &::after{
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%) rotate(-45deg);
+            }
+        }
+        &-btn{
+            width: 100%;
+            @include resa('border-radius', 2px);
+            @include resa('height', 2px);
+            background: #111;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 100%;
+            @include resa('border-radius', 2px);
+            @include resa('height', 2px);
+            background: #111;
+            transition: 300ms ease;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            @include resa('border-radius', 2px);
+            @include resa('height', 2px);
+            background: #111;
+            transition: 300ms ease;
+        }
+    }
+    &__content{
+        display: flex;
+        align-items: center;
+        @include media(575){
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            top: 0;
+            right: 0;
+            background: linear-gradient(323deg, #096B61 0%, #1CAB9C 100%);
+            @include resa('padding', 16px);
+            opacity: 0;
+            visibility: hidden;
+            transition: 300ms ease;
+            z-index: 2;
+        }
+        &.active{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        @include media(575){
+            order: -1;
+            flex-direction: column;
+            align-items: flex-start;
+            @include resa('margin-bottom', 20px);
+        }
+        &.disable-sm{
+            @include media(575){
+                display: none;
+            }
+        }
+        &.enable-sm{
+            display: none;
+            @include media(575){
+                display: flex;
+            }
+        }
+    }
+    &__li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:not(:last-of-type){
+            @include res('margin-right', 32px);
+            @include media(575){
+                margin-right: 0;
+                @include resa('margin-bottom', 20px);
+            }
+        }
+    }
+    &__link{
+        color: #111;
+        @include res('font-size', 16px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        @include media(575){
+            @include resa('font-size', 16px);
+            color: #fff;
+        }
+    }
+    &__right{
+        display: flex;
+        align-items: center;
+        @include media(575){
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @include res('margin-right', 42px);
+        @include media(575){
+            margin-right: 0;
+            @include resa('margin-bottom', 20px);
+        }
+    }
+    &__info{
+        display: flex;
+        align-items: center;
+        @include res('margin-bottom', 8px);
+        @include media(575){
+            @include resa('margin-bottom', 8px);
+        }
+    }
+    &__phone{
+        display: flex;
+        align-items: center;
+        color: #111;
+        @include res('font-size', 16px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 116%;
+        @include res('margin-right', 15px);
+        @include media(575){
+            @include resa('font-size', 16px);
+            @include resa('margin-right', 15px);
+            color: #fff
+        }
+        svg{
+            @include res('margin-right', 4px);
+            @include res('width', 24px);
+            @include res('height', 24px);
+            @include res('min-width', 24px);
+            @include media(575){
+                @include resa('margin-right', 4px);
+                @include resa('width', 24px);
+                @include resa('height', 24px);
+                @include resa('min-width', 24px);
+            }
+        }
+    }
+    &__current{
+        color: var(--2, #575D68);
+        @include res('font-size', 11px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 135%;
+        display: flex;
+        align-items: center;
+        @include media(575){
+            display: none;
+        }
+        svg{
+            display: none;
+            @include res('width', 18px);
+            @include res('min-width', 18px);
+            @include res('height', 18px);
+            @include res('margin-right', 5px);
+        }
+        &.active{
+            svg{
+                display: block;
+            }
+        }
+    }
+    &__medias{
+        display: flex;
+        align-items: center;
+    }
+    &__media{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFF;
+        @include res('font-size', 12px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 135%;
+        @include res('padding-top', 4px);
+        @include res('padding-right', 9px);
+        @include res('padding-bottom', 4px);
+        @include res('padding-left', 9px);
+        @include res('border-radius', 60px);
+        background: #00E676;
+        @include media(575){
+            @include resa('font-size', 12px);
+            @include resa('padding-top', 4px);
+            @include resa('padding-right', 9px);
+            @include resa('padding-bottom', 4px);
+            @include resa('padding-left', 9px);
+            @include resa('border-radius', 60px);
+        }
+        svg{
+            @include res('padding-right', 4px);
+            @include res('min-width', 12px);
+            @include res('width', 12px);
+            @include res('height', 12px);
+            @include media(575){
+                @include resa('padding-right', 4px);
+                @include resa('min-width', 12px);
+                @include resa('width', 12px);
+                @include resa('height', 12px);
+            }
+        }
+    }
+    &__p{
+        color: var(--2, #575D68);
+        @include res('font-size', 12px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 135%;
+        @include res('margin-left', 5px);
+        @include res('margin-right', 5px);
+        @include media(575){
+            @include resa('font-size', 12px);
+            @include resa('margin-left', 5px);
+            @include resa('margin-right', 5px);
+            color: #d4d4d8;
+        }
+    }
+    &__a{
+        color: var(--1, #111);
+        @include res('font-size', 12px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 135%;
+        text-decoration-line: underline;
+        @include media(575){
+            @include resa('font-size', 12px);
+            color: #fff;
+        }
+    }
+    &__socials{
+        display: flex;
+        align-items: center;
+    }
+    &__social{
+        @include res('width', 36px);
+        @include res('min-width', 36px);
+        @include res('height', 36px);
+        @include media(575){
+            @include resa('width', 36px);
+            @include resa('min-width', 36px);
+            @include resa('height', 36px);
+        }
+        &:not(:last-of-type){
+            @include res('margin-right', 12px);
+            @include media(575){
+                @include resa('margin-right', 12px);
+            }
+        }
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
