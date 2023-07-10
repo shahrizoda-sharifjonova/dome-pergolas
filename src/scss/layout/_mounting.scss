@@ -1,0 +1,158 @@
+.mounting{
+    background: #002C27;
+    @include res('padding-top', 120px);
+    @include res('padding-bottom', 160px);
+    @include media(575){
+        @include resa('padding-top', 72px);
+        @include resa('padding-bottom', 96px);
+    }
+    &__title{
+        color: #FFF;
+        text-align: center;
+        font-family: Geologica;
+        @include res('font-size', 56px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%;
+        @include res('margin-bottom', 96px);
+        @include media(575){
+            @include resa('font-size', 32px);
+            @include resa('max-width', 295px);
+            @include resa('margin-bottom', 56px);
+            width: 100%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        br{
+            display: none;
+            @include media(575){
+                display: block;
+            }
+        }
+    }
+    &__desc{
+        color: #FFF;
+        text-align: center;
+        @include res('font-size', 24px);
+        @include res('line-height', 32px);
+        font-style: normal;
+        font-weight: 400;
+        @include res('padding-top', 16px);
+        @include res('padding-bottom', 16px);
+        @include res('max-width', 657px);
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        @include res('margin-bottom', 96px);
+        @include media(575){
+            @include resa('font-size', 20px);
+            @include resa('line-height', 28px);
+            max-width: 100%;
+            @include resa('padding-top', 16px);
+            @include resa('padding-bottom', 16px);
+            @include resa('margin-bottom', 56px);
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            @include res('width', 160px);
+            @include res('height', 2px);
+            background: #FFBC8A;
+            @include media(575){
+                @include resa('width', 160px);
+                @include resa('height', 2px);
+            }
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            @include res('width', 160px);
+            @include res('height', 2px);
+            background: #FFBC8A;
+            @include media(575){
+                @include resa('width', 160px);
+                @include resa('height', 2px);
+            }
+        }
+    }
+    &__content{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+        @include media(575){
+            align-items: stretch;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            @include res('height', 400px);
+            background: linear-gradient(0deg,#002c27 0,rgba(0,44,39,.96) 8.23%,rgba(0,44,39,.85) 19.94%,rgba(0,44,39,.44) 46.23%,rgba(0,44,39,0) 100%);
+        }
+    }
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        &:first-of-type{
+            justify-content: flex-end;
+        }
+        &:nth-of-type(2){
+            width: 100%;
+        }
+        &:not(:last-of-type){
+            @include res('margin-right', 24px);
+            @include media(575){
+                @include resa('margin-right', 8px);
+            }
+        }
+        &:last-of-type{
+            align-items: flex-start;
+        }
+    }
+    &__img{
+        width: 100%;
+        line-height: 0;
+        &:not(:last-of-type){
+            @include res('margin-bottom', 24px);
+            @include media(575){
+                @include resa('margin-bottom', 8px);
+            }
+        }
+        &_sm{
+            @include res('width', 200px);
+            @include media(575){
+                @include resa('width', 48px);
+            }
+        }
+        &_bg{
+            @include res('width', 424px);
+            @include media(575){
+                @include resa('width', 84px);
+                @include resa('height', 84px);
+            }
+            img{
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        img{
+            width: 100%;
+            line-height: 0;
+            @include res('border-radius', 16px);
+            @include media(575){
+                @include resa('border-radius', 8px);
+            }
+        }
+    }
+}
