@@ -93,11 +93,14 @@
             height: 100vh;
             flex-direction: column;
             align-items: flex-start;
-            justify-content: center;
+            justify-content: flex-start;
             top: 0;
             right: 0;
             background: linear-gradient(323deg, #096B61 0%, #1CAB9C 100%);
-            @include resa('padding', 16px);
+            @include resa('padding-top', 150px);
+            @include resa('padding-bottom', 60px);
+            @include resa('padding-right', 16px);
+            @include resa('padding-left', 16px);
             opacity: 0;
             visibility: hidden;
             transition: 300ms ease;

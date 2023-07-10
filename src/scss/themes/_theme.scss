@@ -36,12 +36,13 @@ ul{
 }
 // delete this code
 body{
+    overflow-x: hidden;
     &.hidden{
         overflow-y: hidden;
     }
-    main{
-        z-index: z(header);
-    }
+}
+.main{
+    overflow-x: hidden;
 }
 .container{
     @include res('max-width', 1320px);

@@ -1,3 +1,147 @@
+@font-face {
+  font-family: Acme;
+  font-display: swap;
+  src: url("../fonts/Acme-Regular.woff2") format("woff2"), url("../fonts/Acme-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Geologica;
+  font-display: swap;
+  src: url("../fonts/Geologica-Bold.woff2") format("woff2"), url("../fonts/Geologica-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Acme;
+  font-display: swap;
+  src: url("../fonts/Acme-Regular.woff2") format("woff2"), url("../fonts/Acme-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Geologica;
+  font-display: swap;
+  src: url("../fonts/Geologica-Bold.woff2") format("woff2"), url("../fonts/Geologica-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Manrope;
+  font-display: swap;
+  src: url("../fonts/Manrope-Bold.woff2") format("woff2"), url("../fonts/Manrope-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Gilroy;
+  font-display: swap;
+  src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Manrope;
+  font-display: swap;
+  src: url("../fonts/Manrope-Bold.woff2") format("woff2"), url("../fonts/Manrope-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Gilroy;
+  font-display: swap;
+  src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Manrope;
+  font-display: swap;
+  src: url("../fonts/Manrope-Medium.woff2") format("woff2"), url("../fonts/Manrope-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Manrope;
+  font-display: swap;
+  src: url("../fonts/Manrope-Regular.woff2") format("woff2"), url("../fonts/Manrope-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Manrope;
+  font-display: swap;
+  src: url("../fonts/Manrope-Medium.woff2") format("woff2"), url("../fonts/Manrope-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Manrope;
+  font-display: swap;
+  src: url("../fonts/Manrope-Regular.woff2") format("woff2"), url("../fonts/Manrope-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
 .header {
   padding-top: 0.8333333333vw;
   padding-bottom: 0.8333333333vw;
@@ -317,6 +461,207 @@
   height: 100%;
 }
 
+.intro {
+  padding-top: 5.2083333333vw;
+  padding-bottom: 1.6666666667vw;
+  position: relative;
+}
+
+.intro::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  -webkit-transform: translateX(40%);
+      -ms-transform: translateX(40%);
+          transform: translateX(40%);
+  top: -0.8333333333vw;
+  width: 10.4166666667vw;
+  height: 10.4166666667vw;
+  border-radius: 16.6666666667vw;
+  border: 3.646vw solid rgba(255, 205, 167, 0.4);
+}
+
+.intro::after {
+  content: "";
+  position: absolute;
+  right: 1.875vw;
+  top: 19.7916666667vw;
+  width: 2.9166666667vw;
+  height: 2.9166666667vw;
+  border-radius: 50%;
+  background: rgba(255, 205, 167, 0.4);
+}
+
+.intro__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.intro__left {
+  margin-right: 1.25vw;
+  position: relative;
+}
+
+.no-webp .intro__left::before {
+  background: url(../img/intro-arrow.png) center/cover no-repeat; }
+
+.intro__left::before {
+  content: "";
+  position: absolute;
+  width: 7.2916666667vw;
+  height: 8.8541666667vw;
+  bottom: 2.9166666667vw;
+  left: -7.2916666667vw;
+}
+
+.intro__title {
+  color: #021F1C;
+  font-family: "Geologica";
+  font-size: 2.9166666667vw;
+  line-height: 3.3333333333vw;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 1.25vw;
+}
+
+.intro__title span {
+  color: #AA4B03;
+}
+
+.intro__desc {
+  color: #3F3F3F;
+  font-size: 1.25vw;
+  line-height: 1.6666666667vw;
+  font-style: normal;
+  font-weight: 400;
+  max-width: 29.6875vw;
+  margin-bottom: 3.3333333333vw;
+  width: 100%;
+}
+
+.intro__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #FFF;
+  font-size: 0.8333333333vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  padding-top: 0.8333333333vw;
+  padding-right: 1.6666666667vw;
+  padding-bottom: 0.8333333333vw;
+  padding-left: 1.6666666667vw;
+  border-radius: 5.2083333333vw;
+  background: -o-linear-gradient(127deg, #096B61 0%, #1CAB9C 100%);
+  background: linear-gradient(323deg, #096B61 0%, #1CAB9C 100%);
+}
+
+.intro__btn svg {
+  margin-left: 0.8333333333vw;
+  width: 1.25vw;
+  min-width: 1.25vw;
+  height: 1.25vw;
+}
+
+.intro__img {
+  width: 33.75vw;
+}
+
+.intro__img.enable-sm {
+  display: none;
+}
+
+.intro__img img {
+  width: 100%;
+  border-radius: 0.8333333333vw;
+}
+
+.intro__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0.8333333333vw;
+}
+
+.intro__subtitle {
+  color: #000;
+  font-size: 1.25vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 135%;
+}
+
+.intro__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #000;
+  font-size: 1.25vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+}
+
+.intro__button svg {
+  margin-left: 0.8333333333vw;
+  min-width: 2.5vw;
+  width: 2.5vw;
+  height: 2.5vw;
+}
+
+.intro__awards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.intro__award {
+  width: 6.0416666667vw;
+  margin-right: 1.0416666667vw;
+}
+
+.intro__award img {
+  width: 100%;
+}
+
+.intro__p {
+  color: #3F3F3F;
+  font-size: 1.0416666667vw;
+  line-height: 1.6666666667vw;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -368,12 +713,16 @@ ul {
   list-style-type: none;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 body.hidden {
   overflow-y: hidden;
 }
 
-body main {
-  z-index: 50;
+.main {
+  overflow-x: hidden;
 }
 
 .container {
@@ -431,14 +780,17 @@ input[type=number] {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     top: 0;
     right: 0;
     background: -o-linear-gradient(127deg, #096B61 0%, #1CAB9C 100%);
     background: linear-gradient(323deg, #096B61 0%, #1CAB9C 100%);
-    padding: 4.4444444444vw;
+    padding-top: 41.6666666667vw;
+    padding-bottom: 16.6666666667vw;
+    padding-right: 4.4444444444vw;
+    padding-left: 4.4444444444vw;
     opacity: 0;
     visibility: hidden;
     -webkit-transition: 300ms ease;
@@ -554,4 +906,98 @@ input[type=number] {
   .header__social:not(:last-of-type) {
     margin-right: 3.3333333333vw;
   }
+
+  .intro {
+    padding-top: 17.7777777778vw;
+    padding-bottom: 16.6666666667vw;
+  }
+
+  .intro::before {
+    top: 33.6111111111vw;
+    -webkit-transform: translateX(80%);
+        -ms-transform: translateX(80%);
+            transform: translateX(80%);
+    border: 5.434vw solid rgba(255, 205, 167, 0.4);
+    width: 27.7777777778vw;
+    height: 27.7777777778vw;
+    border-radius: 50%;
+  }
+
+  .intro::after {
+    top: 65vw;
+    right: 18.3333333333vw;
+    width: 6.6666666667vw;
+    height: 6.6666666667vw;
+  }
+
+  .intro__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .intro__left::before {
+    display: none;
+  }
+
+  .intro__title {
+    font-size: 8.8888888889vw;
+    line-height: 11.1111111111vw;
+    margin-bottom: 4.4444444444vw;
+  }
+
+  .intro__desc {
+    font-size: 4.4444444444vw;
+    max-width: 72.2222222222vw;
+    line-height: 6.6666666667vw;
+    margin-bottom: 8.8888888889vw;
+  }
+
+  .intro__btn {
+    width: 100%;
+    font-size: 4.4444444444vw;
+    padding-top: 4.4444444444vw;
+    padding-right: 8.8888888889vw;
+    padding-bottom: 4.4444444444vw;
+    padding-left: 8.8888888889vw;
+    border-radius: 27.7777777778vw;
+  }
+
+  .intro__btn svg {
+    margin-left: 4.4444444444vw;
+    width: 6.6666666667vw;
+    min-width: 6.6666666667vw;
+    height: 6.6666666667vw;
+  }
+
+  .intro__img {
+    width: 100%;
+    margin-bottom: 11.1111111111vw;
+  }
+
+  .intro__img.enable-sm {
+    display: block;
+  }
+
+  .intro__img.disable-sm {
+    display: none;
+  }
+
+  .intro__img img {
+    border-radius: 4.4444444444vw;
+  }
+
+  .intro__info {
+    display: none;
+  }
+
+  .intro__awards {
+    display: none;
+  }
 }
+
+.webp .intro__left::before { background: url(../img/intro-arrow.webp) center/cover no-repeat; }

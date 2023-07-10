@@ -1,0 +1,218 @@
+.intro{
+    @include res('padding-top', 100px);
+    @include res('padding-bottom', 32px);
+    position: relative;
+    @include media(575){
+        @include resa('padding-top', 64px);
+        @include resa('padding-bottom', 60px);
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        right: 0;
+        transform: translateX(40%);
+        @include res('top', -16px);
+        @include res('width', 200px);
+        @include res('height', 200px);
+        @include res('border-radius', 320px);
+        border: 3.646vw solid rgba(255, 205, 167, 0.40);
+        @include media(575){
+            @include resa('top', 121px);
+            transform: translateX(80%);
+            border: 5.434vw solid rgba(255, 205, 167, 0.40);
+            @include resa('width', 100px);
+            @include resa('height', 100px);
+            border-radius: 50%;
+        }
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        @include res('right', 36px);
+        @include res('top', 380px);
+        @include res('width', 56px);
+        @include res('height', 56px);
+        border-radius: 50%;
+        background: rgba(255, 205, 167, 0.40);
+        @include media(575){
+            @include resa('top', 234px);
+            @include resa('right', 66px);
+            @include resa('width', 24px);
+            @include resa('height', 24px);
+        }
+    }
+    &__row{
+        display: flex;
+        align-items: center;
+        @include media(575){
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    &__left{
+        @include res('margin-right', 24px);
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            @include res('width', 140px);
+            @include res('height', 170px);
+            background: url(../img/intro-arrow.png) center / cover no-repeat;
+            @include res('bottom', 56px);
+            @include res('left', -140px);
+            @include media(575){
+                display: none;
+            }
+        }
+    }
+    &__title{
+        color: #021F1C;
+        font-family: 'Geologica';
+        @include res('font-size', 56px);
+        @include res('line-height', 64px);
+        font-style: normal;
+        font-weight: 700;
+        @include res('margin-bottom', 24px);
+        @include media(575){
+            @include resa('font-size', 32px);
+            @include resa('line-height', 40px);
+            @include resa('margin-bottom', 16px);
+        }
+        span{
+            color: #AA4B03
+        }
+    }
+    &__desc{
+        color: #3F3F3F;
+        @include res('font-size', 24px);
+        @include res('line-height', 32px);
+        font-style: normal;
+        font-weight: 400;
+        @include res('max-width', 570px);
+        @include res('margin-bottom', 64px);
+        width: 100%;
+        @include media(575){
+            @include resa('font-size', 16px);
+            @include resa('max-width', 260px);
+            @include resa('line-height', 24px);
+            @include resa('margin-bottom', 32px);
+        }
+    }
+    &__btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFF;
+        @include res('font-size', 16px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        @include res('padding-top', 16px);
+        @include res('padding-right', 32px);
+        @include res('padding-bottom', 16px);
+        @include res('padding-left', 32px);
+        @include res('border-radius', 100px);
+        background: linear-gradient(323deg, #096B61 0%, #1CAB9C 100%);
+        @include media(575){
+            width: 100%;
+            @include resa('font-size', 16px);
+            @include resa('padding-top', 16px);
+            @include resa('padding-right', 32px);
+            @include resa('padding-bottom', 16px);
+            @include resa('padding-left', 32px);
+            @include resa('border-radius', 100px);
+        }
+        svg{
+            @include res('margin-left', 16px);
+            @include res('width', 24px);
+            @include res('min-width', 24px);
+            @include res('height', 24px);
+            @include media(575){
+                @include resa('margin-left', 16px);
+                @include resa('width', 24px);
+                @include resa('min-width', 24px);
+                @include resa('height', 24px);
+            }
+        }
+    }
+    &__img{
+        @include res('width', 648px);
+        @include media(575){
+            width: 100%;
+            @include resa('margin-bottom', 40px);
+        }
+        &.enable-sm{
+            display: none;
+            @include media(575){
+                display: block;
+            }
+        }
+        &.disable-sm{
+            @include media(575){
+                display: none;
+            }
+        }
+        img{
+            width: 100%;
+            @include res('border-radius', 16px);
+            @include media(575){
+                @include resa('border-radius', 16px);
+            }
+        }
+    }
+    &__info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include res('margin-top', 16px);
+        @include media(575){
+            display: none;
+        }
+    }
+    &__subtitle{
+        color: #000;
+        @include res('font-size', 24px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 135%;
+    }
+    &__button{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        color: #000;
+        @include res('font-size', 24px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 135%;
+        svg{
+            @include res('margin-left', 16px);
+            @include res('min-width', 48px);
+            @include res('width', 48px);
+            @include res('height', 48px);
+        }
+    }
+    &__awards{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        @include media(575){
+            display: none;
+        }
+    }
+    &__award{
+        @include res('width', 116px);
+        @include res('margin-right', 20px);
+        img{
+            width: 100%;
+        }
+    }
+    &__p{
+        color: #3F3F3F;
+        @include res('font-size', 20px);
+        @include res('line-height', 32px);
+        font-style: normal;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
