@@ -15,3 +15,11 @@ menu.addEventListener('click', (e)=>{
     content.classList.toggle('active')
     body.classList.toggle('hidden')
 })
+
+const loveBtns = document.querySelectorAll('.projects__love');
+
+loveBtns.forEach(love=>{
+    love.addEventListener('click', (e)=>{
+        love.classList.toggle('active')
+    })
+})

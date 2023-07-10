@@ -1,0 +1,262 @@
+.projects{
+    @include res('padding-top', 120px);
+    @include res('padding-bottom', 120px);
+    position: relative;
+    overflow: hidden;
+    @include media(575){
+        @include resa('padding-top', 72px);
+        @include resa('padding-bottom', 72px);
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        @include res('bottom', -600px);
+        @include res('right', -310px);
+        @include res('width', 640px);
+        @include res('height', 640px);
+        @include res('border-radius', 640px);
+        border: 3.646vw solid rgba(255, 205, 167, 0.40);
+        @include media(575){
+            @include resa('bottom', -207px);
+            @include resa('right', -85px);
+            @include resa('width',212px);
+            @include resa('height', 212px);
+            @include resa('border-radius', 212px);
+            border: 6.4vw solid rgba(255, 205, 167, 0.40);
+        }
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        @include resa('bottom', 6px);
+        @include resa('right', 147px);
+        @include resa('max-width', 24px);
+        @include resa('width', 6px);
+        @include resa('height', 6px);
+        border: 4vw solid rgba(255, 205, 167, 0.40);
+        border-radius: 50%;
+        display: none;
+        @include media(575){
+            display: block;
+        }
+    }
+    &__title{
+        color: var(--1, #111);
+        text-align: center;
+        font-family: 'Geologica';
+        @include res('font-size', 56px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%;
+        @include res('max-width', 590px);
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        @include res('margin-bottom', 72px);
+        @include media(575){
+            @include resa('font-size', 32px);
+            max-width: 100%;
+            @include resa('margin-bottom', 30px);
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            @include res('top', -34px);
+            @include res('left', -47px);
+            @include res('width', 57px);
+            @include res('height', 67px);
+            background: url(../img/projects-figure.png) center / cover no-repeat;
+            @include media(575){
+                @include resa('top', -15px);
+                @include resa('left', -12px);
+                @include resa('width', 27px);
+                @include resa('height', 32px);
+            }
+        }
+    }
+    &__content{
+        @include res('margin-bottom', 72px);
+        @include media(575){
+            @include resa('margin-bottom', 56px);
+        }
+    }
+    &__top{
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        @include res('margin-bottom', 56px);
+        @include media(575){
+            flex-direction: column;
+            @include resa('width', 295px);
+            @include resa('margin-bottom', 56px);
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    &__bottom{
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        @include media(575){
+            flex-direction: column;
+            @include resa('width', 295px);
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    &__item{
+        position: relative;
+        &:not(:last-of-type){
+            @include media(575){
+                @include resa('margin-bottom', 56px);
+            }
+        }
+    }
+    &__love{
+        cursor: pointer;
+        position: absolute;
+        @include res('top', 16px);
+        @include res('right', 16px);
+        @include res('width', 24px);
+        @include res('height', 24px);
+        display: flex;
+        @include media(575){
+            @include resa('top', 16px);
+            @include resa('right', 16px);
+            @include resa('width', 24px);
+            @include resa('height', 24px);
+        }
+        &.active{
+            svg{
+                fill: #FF511A;
+                path{
+                    stroke: transparent;
+                }
+            }
+        }
+        svg{
+            transition: 300ms ease;
+            width: 100%;
+            max-height: 100%;
+            height: 100%;
+            path{
+                stroke: #000;
+            }
+        }
+    }
+    &__img{
+        @include res('padding-right', 12px);
+        @include res('padding-left', 12px);
+        @include res('border-radius', 16px);
+        background: #E5E5E5;
+        @include res('margin-bottom', 24px);
+        @include media(575){
+            @include resa('padding-right', 12px);
+            @include resa('padding-left', 12px);
+            @include resa('border-radius', 16px);
+            @include resa('margin-bottom', 16px);
+        }
+        img{
+            @include res('width', 290px);
+            @include media(575){
+                width: 100%;
+            }
+        }
+    }
+    &__subtitle{
+        color: var(--1, #111);
+        @include res('font-size', 16px);
+        line-height: 120%;
+        font-style: normal;
+        font-weight: 400;
+        @include res('margin-bottom', 16px);
+        @include media(575){
+            @include resa('font-size', 16px);
+            @include resa('margin-bottom', 8px);
+        }
+    }
+    &__row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__prices{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    &__discount{
+        @include res('margin-right', 16px);
+        color: #AA4B03;
+        @include res('font-size', 24px);
+        line-height: 120%;
+        font-style: normal;
+        font-weight: 700;
+        @include media(575){
+            @include resa('margin-right', 16px);
+            @include resa('font-size', 20px);
+        }
+    }
+    &__price{
+        color: #3F3F3F;
+        @include res('font-size', 24px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: line-through;
+        @include media(575){
+            @include resa('font-size', 20px);
+        }
+    }
+    &__btn{
+        @include res('width', 48px);
+        @include res('height', 48px);
+        @include media(575){
+            @include resa('width', 48px);
+            @include resa('height', 48px);
+        }
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__button{
+        @include res('padding-top', 16px);
+        @include res('padding-right', 32px);
+        @include res('padding-bottom', 16px);
+        @include res('padding-left', 32px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+        color: #FFF;
+        @include res('font-size', 16px);
+        line-height: 120%;
+        font-style: normal;
+        font-weight: 500;
+        @include res('border-radius', 100px);
+        background: linear-gradient(323deg, #096B61 0%, #1CAB9C 100%);
+        @include media(575){
+            @include resa('padding-top', 16px);
+            @include resa('padding-right', 32px);
+            @include resa('padding-bottom', 16px);
+            @include resa('padding-left', 32px);
+            @include resa('font-size', 16px);
+            @include resa('border-radius', 100px);
+            width: 100%;
+        }
+        svg{
+            @include res('margin-left', 16px);
+            @include res('width', 16px);
+            @include res('height', 16px);
+            @include media(575){
+                @include resa('margin-left', 16px);
+                @include resa('width', 16px);
+                @include resa('height', 16px);
+            }
+        }
+    }
+}
