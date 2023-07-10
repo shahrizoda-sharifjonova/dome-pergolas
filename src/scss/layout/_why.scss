@@ -1,0 +1,27 @@
+.why{
+    background: #002C27;
+    @include res('padding-top', 112px);
+    @include res('padding-bottom', 120px);
+    &__title{
+        text-align: center;
+        color: #FFF;
+        font-family: 'Geologica';
+        @include res('font-size', 56px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%;
+        position: relative;
+        width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+        &::before{
+            content: '';
+            position: absolute;
+            @include res('top', -24px);
+            @include res('right', -59px);
+            @include res('width', 45px);
+            @include res('height', 48px);
+            background: url('../img/why-figure.svg') center / cover no-repeat;
+        }
+    }cd 
+}
