@@ -1,9 +1,69 @@
 .options{
     @include res('padding-top', 120px);
     @include res('padding-bottom', 120px);
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     @include media(575){
         @include resa('padding-top', 72px);
         @include resa('padding-bottom', 72px);
+    }
+    &__figure{
+        position: absolute;
+        z-index: -1;
+        &_1{
+            @include res('top', 484px);
+            @include res('left', -422px);
+            @include res('width', 640px);
+            @include res('height', 640px);
+            border-radius: 50%;
+            border: 3.646vw solid rgba(255, 205, 167, 0.40);
+            @include media(575){
+                top: auto;
+                @include resa('bottom', 2508px);
+                @include resa('left', -84px);
+                @include resa('width',141px);
+                @include resa('height', 141px);
+                border: 6.4vw solid rgba(255, 205, 167, 0.40);
+            }
+        }
+        &_2{
+            background: url(../img/intro-figure-2.svg) center / cover no-repeat;
+            width: 100%;
+            @include res('top', 1364px);
+            @include res('height', 1100px);
+            @include media(575){
+                background: url(../img/options-figure-sm.svg) center / cover no-repeat;
+                @include resa('top', 720px);
+                @include resa('height',1133px);
+            }
+        }
+        &_3{
+            @include res('width', 255px);
+            @include res('height', 255px);
+            border: 3.646vw solid rgba(255, 205, 167, 0.40);
+            border-radius: 50%;
+            @include res('bottom', 680px);
+            @include res('right', -55px);
+            @include media(575){
+                display: none;
+            }
+        }
+        &_4{
+            @include res('width', 640px);
+            @include res('height', 640px);
+            @include res('bottom', -65px);
+            @include res('right', -177px);
+            border-radius: 50%;
+            border: 3.646vw solid rgba(255, 205, 167, 0.40);
+            @include media(575){
+                @include resa('width', 141px);
+                @include resa('height', 141px);
+                @include resa('bottom', 1266px);
+                @include resa('right', -40px);
+                border: 6.4vw solid rgba(255, 205, 167, 0.40);
+            }
+        }
     }
     &__title{
         color: var(--1, #111);
