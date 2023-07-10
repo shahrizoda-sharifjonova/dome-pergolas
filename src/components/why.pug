@@ -3,18 +3,27 @@ mixin why()
         .why__body.container 
             h2.why__title Почему мы?
             .why__cards 
-                div(data-target="url(../img/why-figure-1.png)").why__card
+                .why__card
+                    .why__img 
+                        img(src="@img/why-figure-1.png", alt="" draggable="false").disable-sm
+                        img(src="@img/why-figure-1_sm.png", alt="" draggable="false").enable-sm
                     p.why__subtitle Произвели более 300 беседок
                     ul.why__list 
                         li.why__li Собственное производство по стандартам ГОСТ и СНиП
                         li.why__li Производятся из сертифицированных, негорючих материалов
-                div(data-target="url(../img/why-figure-2.png)").why__card
+                .why__card
+                    .why__img 
+                        img(src="@img/why-figure-2.png", alt="" draggable="false").disable-sm
+                        img(src="@img/why-figure-2_sm.png", alt="" draggable="false").enable-sm
                     p.why__subtitle Премиум Качество сборки 
                     ul.why__list 
                         li.why__li Монтаж и сборка без щелей и зазоров 
                         li.why__li Качественная  фурнитура
                         li.why__li Цельные листы поликарбоната - 100% герметичность
-                div(data-target="url(../img/why-figure-3.png)").why__card
+                .why__card
+                    .why__img 
+                        img(src="@img/why-figure-3.png", alt="" draggable="false").disable-sm
+                        img(src="@img/why-figure-3_sm.png", alt="" draggable="false").enable-sm
                     p.why__subtitle Гарантия 15 лет 
                     ul.why__list 
                         li.why__li Защита от корозии металла
