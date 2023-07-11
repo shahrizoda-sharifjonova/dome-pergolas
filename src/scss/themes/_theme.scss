@@ -49,8 +49,6 @@ body{
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    @include res('padding-right', 15px);
-    @include res('padding-left', 15px);
     @include media(576){
         @include resa('max-width', 345px);
         @include resa('padding-right', 15px);

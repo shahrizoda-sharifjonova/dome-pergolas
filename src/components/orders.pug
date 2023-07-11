@@ -1,0 +1,139 @@
+mixin orders()
+    .orders 
+        .orders__body.container 
+            .orders__wrapper
+                .orders__left 
+                    h2.orders__title Давайте сформируем #[span индивидуальный] заказ 
+                    p.orders__desc Ответьте на несколько вопросов #[span для заказа купольной беседки] и оставьте контактные данные для обратной связи
+                    p.orders__p Наш сотрудник в ближайшее время свяжется с Вами, на основе указанных пожеланий выведет точную смету для оформления заказа и сообщит срок выполнения или подготовит развернутое коммерческое предложение
+                    p.orders__text.disable-sm Или позвоните по номеру:
+                    a(href="#!").orders__phone.disable-sm 
+                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="56" height="56" rx="28" fill="white" fill-opacity="0.25"/>
+                            <path d="M38.0001 32.92V35.92C38.0012 36.1985 37.9441 36.4741 37.8326 36.7293C37.721 36.9845 37.5574 37.2136 37.3521 37.4018C37.1469 37.5901 36.9046 37.7335 36.6408 37.8227C36.377 37.9119 36.0974 37.945 35.8201 37.92C32.7429 37.5856 29.7871 36.5341 27.1901 34.85C24.7739 33.3146 22.7254 31.2661 21.1901 28.85C19.5 26.2412 18.4483 23.271 18.1201 20.18C18.0951 19.9034 18.1279 19.6247 18.2166 19.3616C18.3052 19.0985 18.4476 18.8567 18.6348 18.6516C18.822 18.4465 19.0499 18.2827 19.3038 18.1705C19.5578 18.0583 19.8324 18.0002 20.1101 18H23.1101C23.5954 17.9952 24.0658 18.1671 24.4338 18.4835C24.8018 18.8 25.0421 19.2394 25.1101 19.72C25.2367 20.68 25.4715 21.6227 25.8101 22.53C25.9446 22.8879 25.9737 23.2769 25.894 23.6509C25.8142 24.0248 25.6289 24.3681 25.3601 24.64L24.0901 25.91C25.5136 28.4135 27.5865 30.4864 30.0901 31.91L31.3601 30.64C31.6319 30.3711 31.9752 30.1858 32.3492 30.1061C32.7231 30.0263 33.1121 30.0554 33.4701 30.19C34.3773 30.5285 35.32 30.7634 36.2801 30.89C36.7658 30.9585 37.2095 31.2032 37.5266 31.5775C37.8437 31.9518 38.0122 32.4295 38.0001 32.92Z" fill="white"/>
+                        </svg>
+                        | +7 (993) 370-44-00
+                .orders__right 
+                    .orders__content.active#firstContent
+                        .orders__content-top
+                            .orders__top 
+                                p.orders__subtitle Выберите тип конструкции
+                                .progress-bar-container 
+                                    div(data-value="1/5" style="--progress-value: 20").progress-bar.html
+                            .orders__items 
+                                .orders__item 
+                                    .orders__img    
+                                        img(src="@img/orders-1.png", alt="" draggable="false")
+                                    p.orders__name Купол d 4 м
+                                .orders__item 
+                                    .orders__img    
+                                        img(src="@img/orders-2.png", alt="" draggable="false")
+                                    p.orders__name Купол d 5 м
+                                .orders__item 
+                                    .orders__img    
+                                        img(src="@img/orders-3.png", alt="" draggable="false")
+                                    p.orders__name Купол Aqua
+                                .orders__item 
+                                    .orders__img    
+                                        img(src="@img/orders-4.png", alt="" draggable="false")
+                                    p.orders__name Купол d 6 м
+                                .orders__item 
+                                    .orders__img    
+                                        img(src="@img/orders-5.png", alt="" draggable="false")
+                                    p.orders__name Купол d 2,5 м
+                                .orders__item 
+                                    .orders__img    
+                                        img(src="@img/orders-6.png", alt="" draggable="false")
+                                    p.orders__name Купол Ellipse Avto
+                                .orders__item 
+                                    .orders__img    
+                                        img(src="@img/orders-7.png", alt="" draggable="false")
+                                    p.orders__name Купол Ellipse Cafe
+                        .orders__buttons 
+                            button(type="button" data-target="#secondContent").open-content.orders__btn Далее
+                    .orders__content#secondContent
+                        .orders__content-top
+                            .orders__top 
+                                p.orders__subtitle Укажите дополнительное оснащение
+                                .progress-bar-container 
+                                    div(data-value="2/5" style="--progress-value: 40").progress-bar.html
+                            .orders__checkboxes 
+                                .orders__checkbox 
+                                    input(type="checkbox" name="ordersCheckbox" id="checkbox1").orders__checkbox-input
+                                    label(for="checkbox1").orders__label Комплект  электрики
+                                .orders__checkbox 
+                                    input(type="checkbox" name="ordersCheckbox" id="checkbox2").orders__checkbox-input
+                                    label(for="checkbox2").orders__label Деревянный подиум
+                                .orders__checkbox 
+                                    input(type="checkbox" name="ordersCheckbox" id="checkbox3").orders__checkbox-input
+                                    label(for="checkbox3").orders__label Гибкий неон
+                                .orders__checkbox 
+                                    input(type="checkbox" name="ordersCheckbox" id="checkbox4").orders__checkbox-input
+                                    label(for="checkbox4").orders__label Гирлянда
+                        .orders__buttons 
+                            button(type="button" data-target="#firstContent").open-content.orders__button  Назад
+                            button(type="button" data-target="#thirdContent").open-content.orders__btn  Далее
+                    .orders__content#thirdContent 
+                        .orders__content-top
+                            .orders__top 
+                                p.orders__subtitle Напишите желаемый цвет каркаса
+                                .progress-bar-container 
+                                    div(data-value="3/5" style="--progress-value: 60").progress-bar.html
+                            .orders__txt Коричневый, серый, бежевый, черный, зеленый, синий или любой другой
+                            textarea(placeholder="Желаемый цвет").orders__textarea
+                        .orders__buttons 
+                            button(type="button" data-target="#secondContent").open-content.orders__button  Назад
+                            button(type="button" data-target="#fourthContent").open-content.orders__btn  Далее
+                    .orders__content#fourthContent 
+                        .orders__content-top
+                            .orders__top 
+                                p.orders__subtitle Укажите дополнительные услуги
+                                .progress-bar-container 
+                                    div(data-value="4/5" style="--progress-value:80").progress-bar.html
+                            .orders__checkboxes 
+                                .orders__checkbox 
+                                    input(type="checkbox" name="ordersCheckbox" id="checkbox5").orders__checkbox-input
+                                    label(for="checkbox5").orders__label Доставка
+                                .orders__checkbox 
+                                    input(type="checkbox" name="ordersCheckbox" id="checkbox6").orders__checkbox-input
+                                    label(for="checkbox6").orders__label Тонированные стены
+                                .orders__checkbox 
+                                    input(type="checkbox" name="ordersCheckbox" id="checkbox7").orders__checkbox-input
+                                    label(for="checkbox7").orders__label Дополнительный вход
+                                .orders__checkbox 
+                                    input(type="checkbox" name="ordersCheckbox" id="checkbox8").orders__checkbox-input
+                                    label(for="checkbox8").orders__label Шеф монтаж
+                                .orders__checkbox 
+                                    input(type="checkbox" name="ordersCheckbox" id="checkbox9").orders__checkbox-input
+                                    label(for="checkbox9").orders__label Монтаж беседки
+                        .orders__buttons 
+                            button(type="button" data-target="#thirdContent").open-content.orders__button  Назад
+                            button(type="button" data-target="#fifthContent").open-content.orders__btn  Далее
+                    .orders__content#fifthContent   
+                        .orders__content-top
+                            .orders__top 
+                                p.orders__subtitle Укажите дополнительные услуги
+                                .progress-bar-container 
+                                    div(data-value="5/5" style="--progress-value: 100").progress-bar.html
+                        form(action="").orders__form
+                            .orders__form-content
+                                .orders__infos  
+                                    p.orders__info Адрес доставка
+                                    input(type="text" placeholder="Адрес доставка" required).orders__input
+                                .orders__infos  
+                                    p.orders__info Имя
+                                    input(type="text" placeholder="Имя" required).orders__input
+                                .orders__infos  
+                                    p.orders__info Телефон
+                                    input(type="number" placeholder="Телефон" required).orders__input
+                                .orders__row 
+                                    input(type="checkbox" name="ordersCheckbox" id="checkbox10").orders__checkbox-input.sm
+                                    label(for="checkbox10").orders__form-label Нажимая кнопку «Отправить», вы соглашаетесь с условиями Политики конфиденциальности 
+                            button(type="submit").orders__btn.sb Отправить
+            p.orders__text.enable-sm Или позвоните по номеру:
+            a(href="#!").orders__phone.enable-sm 
+                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="56" height="56" rx="28" fill="white" fill-opacity="0.25"/>
+                    <path d="M38.0001 32.92V35.92C38.0012 36.1985 37.9441 36.4741 37.8326 36.7293C37.721 36.9845 37.5574 37.2136 37.3521 37.4018C37.1469 37.5901 36.9046 37.7335 36.6408 37.8227C36.377 37.9119 36.0974 37.945 35.8201 37.92C32.7429 37.5856 29.7871 36.5341 27.1901 34.85C24.7739 33.3146 22.7254 31.2661 21.1901 28.85C19.5 26.2412 18.4483 23.271 18.1201 20.18C18.0951 19.9034 18.1279 19.6247 18.2166 19.3616C18.3052 19.0985 18.4476 18.8567 18.6348 18.6516C18.822 18.4465 19.0499 18.2827 19.3038 18.1705C19.5578 18.0583 19.8324 18.0002 20.1101 18H23.1101C23.5954 17.9952 24.0658 18.1671 24.4338 18.4835C24.8018 18.8 25.0421 19.2394 25.1101 19.72C25.2367 20.68 25.4715 21.6227 25.8101 22.53C25.9446 22.8879 25.9737 23.2769 25.894 23.6509C25.8142 24.0248 25.6289 24.3681 25.3601 24.64L24.0901 25.91C25.5136 28.4135 27.5865 30.4864 30.0901 31.91L31.3601 30.64C31.6319 30.3711 31.9752 30.1858 32.3492 30.1061C32.7231 30.0263 33.1121 30.0554 33.4701 30.19C34.3773 30.5285 35.32 30.7634 36.2801 30.89C36.7658 30.9585 37.2095 31.2032 37.5266 31.5775C37.8437 31.9518 38.0122 32.4295 38.0001 32.92Z" fill="white"/>
+                </svg>
+                | +7 (993) 370-44-00

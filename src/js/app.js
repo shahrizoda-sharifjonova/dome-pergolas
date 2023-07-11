@@ -35,3 +35,26 @@ loveBtns.forEach(love=>{
         love.classList.toggle('active')
     })
 })
+
+const items = document.querySelectorAll('.orders__item');
+items.forEach(item=>{
+    item.addEventListener('click', (e)=>{
+        items.forEach(itemtoremove=>{
+            itemtoremove.classList.remove('active')
+        })
+        item.classList.toggle('active')
+    })
+})
+
+const openbtns = document.querySelectorAll('.open-content');
+const contents = document.querySelectorAll('.orders__content');
+
+openbtns.forEach(openBtn =>{
+    openBtn.addEventListener('click', (e)=>{
+        contents.forEach(contenttoremove=>{
+            contenttoremove.classList.remove('active')
+        })
+        const target = openBtn.getAttribute("data-target")
+        document.querySelector(target).classList.add('active');
+    })
+})
