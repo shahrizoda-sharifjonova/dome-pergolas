@@ -1,0 +1,97 @@
+.services{
+    background: #002C27;
+    @include res('padding-top', 120px);
+    @include res('padding-bottom', 120px);
+    &__title{
+        color: #FFF;
+        text-align: center;
+        font-family: Geologica;
+        @include res('font-size', 56px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%;
+        @include res('max-width', 620px);
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        @include res('margin-bottom', 40px);
+    }
+    &__row{
+        display: flex;
+        justify-content: space-between;
+        @include res('max-width', 742px);
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        @include res('margin-bottom', 40px);
+    }
+    &__arrow{
+        @include res('width', 135px);
+        img{
+            width: 100%;
+        }
+    }
+    &__content{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    // &__left{
+    //     @include res('padding-right', 90px);
+    // }
+    &__right{
+        .services__item{
+            align-items: flex-end;
+        }
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        &:not(:last-of-type){
+            @include res('margin-bottom', 64px);
+        }
+        &.left1{
+            @include res('padding-left', 224px);
+        }
+        &.left2{
+            @include res('padding-left', 112px);
+        }
+        &.right1{
+            @include res('padding-right', 82px);
+            transform: translateX();
+        }
+        &.right2{
+            @include res('padding-right', 82px);
+        }
+        &.right3{
+            @include res('padding-right', 48px);
+        }
+        &.right4{
+            @include res('padding-right', 57px);
+        }
+    }
+    &__subtitle{
+        color: #FFF;
+        @include res('font-size', 24px);
+        @include res('margin-bottom', 8px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        width: max-content;
+    }
+    &__p{
+        color: rgba(255, 255, 255, 0.85);
+        @include res('font-size', 16px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &__img{
+        @include res('max-width', 648px);
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+}

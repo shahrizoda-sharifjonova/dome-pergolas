@@ -1,0 +1,275 @@
+.reviews{
+    @include res('padding-bottom', 120px);
+    @include res('padding-top', 10px);
+    position: relative;
+    overflow: hidden;
+    @include media(575){
+        @include resa('padding-bottom', 72px);
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        @include res('left', -114px);
+        @include res('bottom', -90px);
+        @include res('width', 380px);
+        @include res('height', 483px);
+        background: url(../img/reviews-figure.svg) center / contain no-repeat;
+        @include media(575){
+            display: none;
+        }
+    }
+    &__title{
+        color: var(--1, #111);
+        font-family: Geologica;
+        @include res('font-size', 56px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%;
+        @include res('margin-bottom', 72px);
+        text-align: center;
+        position: relative;
+        width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+        @include media(575){
+            @include resa('max-width', 156px);
+            width: 100%;
+            @include resa('font-size', 32px);
+            text-align: center;
+            @include resa('margin-bottom', 56px);
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            @include res('left', -64px);
+            @include res('top', -7px);
+            background: url(../img/reviews-heart.svg) center / cover no-repeat;
+            @include res('width', 40px);
+            @include res('height', 64px);
+            @include media(575){
+                @include resa('width', 26px);
+                @include resa('height', 40px);
+                @include resa('left', -39px);
+            }
+        }
+    }
+    &__slider{
+        width: 100%;
+        position: relative;
+    }
+    &__swiper{
+        width: 100%;
+        overflow: hidden;
+        @include media(575){
+            @include resa('margin-bottom', 32px);
+        }
+        &-wrapper{
+            width: max-content;
+            display: flex;
+            align-items: stretch;
+        }
+    }
+    &__item{
+        @include res('border-radius', 16px);
+        background: #F8F8F8;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include res('padding', 32px);
+        @include media(575){
+            @include resa('padding-top', 32px);
+            @include resa('padding-right', 24px);
+            @include resa('padding-bottom', 32px);
+            @include resa('padding-left', 24px);
+        }
+    }
+    &__top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include res('margin-bottom', 40px);
+        @include media(575){
+            @include resa('margin-bottom', 24px);
+        }
+    }
+    &__profile{
+        display: flex;
+        align-items: center;
+        @include media(575){
+            @include resa('margin-right', 20px);
+        }
+        &-img{
+            @include res('min-width', 64px);
+            @include res('width', 64px);
+            @include res('margin-right', 8px);
+            @include media(575){
+                @include resa('width', 64px);
+                @include resa('min-width', 64px);
+                @include resa('margin-right', 8px);
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+    &__name{
+        color: #111;
+        @include res('font-size', 16px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        @include res('margin-bottom', 8px);
+        @include media(575){
+            color: #111;
+            @include resa('font-size', 16px);
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            @include resa('margin-bottom', 8px);
+        }
+    }
+    &__date{
+        color: #3F3F3F;
+        @include res('font-size', 16px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        @include media(575){
+            @include resa('font-size', 16px);
+        }
+    }
+    &__rating{
+        display: flex;
+        align-items: center;
+        @include media(575){
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &-p{
+            color: #111;
+            @include res('font-size', 16px);
+            font-style: normal;
+            font-weight: 500;
+            line-height: 125%;
+            @include res('margin-right', 8px);
+            @include media(575){
+                color: #111;
+                @include resa('font-size', 14px);
+                font-style: normal;
+                font-weight: 500;
+                line-height: 125%;
+                margin-right: 0;
+                @include resa('margin-bottom', 4px);
+            }
+        }
+        &-num{
+            @include res('padding-top', 2px);
+            @include res('padding-right', 9px);
+            @include res('padding-bottom', 2px);
+            @include res('padding-left', 9px);
+            color: var(--5, #FFF);
+            @include res('font-size', 17px);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 125%;
+            @include res('border-radius', 3px);
+            background: #AA4B03;
+            @include media(575){
+                @include resa('border-radius', 3px);
+                @include resa('font-size', 17px);
+                @include resa('padding-top', 2px);
+                @include resa('padding-right', 9px);
+                @include resa('padding-bottom', 2px);
+                @include resa('padding-left', 9px);
+            }
+        }
+    }
+    &__desc{
+        color: #3F3F3F;
+        @include res('font-size', 16px);
+        line-height: 140%;
+        font-style: normal;
+        font-weight: 400;
+        @include res('margin-bottom', 16px);
+        @include media(575){
+            @include resa('font-size', 14px);
+            @include resa('margin-bottom', 16px);
+        }
+    }
+    &__link{
+        @include res('font-size', 16px);
+        line-height: 120%;
+        font-style: normal;
+        font-weight: 600;
+        color: #096B61;
+        text-decoration: underline;
+        display: block;
+        @include res('margin-bottom', 32px);
+        @include media(575){
+            @include resa('font-size', 16px);
+            @include resa('margin-bottom', 32px);
+        }
+    }
+    &__img{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    &__buttons{
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        width: calc(100% + 11.667vw);
+        @include res('margin-left', -120px);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        @include media(575){
+            max-width: max-content;
+            width: max-content;
+            margin-left: auto;
+            margin-right: auto;
+            position: static;
+            transform: translateY(0);
+        }
+    }
+    &__btn{
+        &-prev{
+            @include res('width', 48px);
+            @include res('height', 48px);
+            pointer-events: all;
+            cursor: pointer;
+            @include media(575){
+                @include resa('width', 48px);
+                @include resa('height', 48px);
+                @include resa('margin-right', 40px);
+            }
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            &.swiper-button-disabled{
+                opacity: 0.7;
+            }
+        }
+        &-next{
+            @include res('width', 48px);
+            @include res('height', 48px);
+            pointer-events: all;
+            cursor: pointer;
+            @include media(575){
+                @include resa('width', 48px);
+                @include resa('height', 48px);
+            }
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            &.swiper-button-disabled{
+                opacity: 0.7;
+            }
+        }
+    }
+}

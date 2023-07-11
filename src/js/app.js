@@ -17,6 +17,23 @@ new Swiper(".options__swiper", {
     },
 }); 
 
+new Swiper(".reviews__swiper", {
+    grabCursor: true,
+    modules: [Navigation,Pagination],
+    slidesPerView: 1,
+    spaceBetween: 24,
+    watchSlidesProgress: true,
+    navigation:{
+        prevEl: '.reviews__btn-prev',
+        nextEl: '.reviews__btn-next',
+    },
+    breakpoints:{
+        575:{
+            slidesPerView: 2,
+        }
+    }
+}); 
+
 const menu = document.querySelector('.menu')
 const content = document.querySelector('.header__content');
 const body = document.querySelector('body');

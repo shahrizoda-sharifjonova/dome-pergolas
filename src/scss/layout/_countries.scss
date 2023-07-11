@@ -73,7 +73,6 @@
     }
     &__title{
         color: #1C1C1C;
-        font-family: 'Acme';
         @include res('font-size', 24px);
         font-style: normal;
         font-weight: 400;
@@ -82,7 +81,6 @@
         @include res('max-width', 560px);
         width: 100%;
         @include media(575){
-            font-family: Geologica;
             font-weight: 700;
             @include resa('font-size', 20px);
             @include resa('margin-bottom', 24px);
@@ -90,10 +88,6 @@
         }
         span{
             color: #AA4B03;
-            font-family: 'Acme';
-            @include media(575){
-                font-family: Geologica;
-            }
             &.bold{
                 font-weight: 500;
             }
