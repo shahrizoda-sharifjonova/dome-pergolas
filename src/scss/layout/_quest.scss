@@ -1,0 +1,170 @@
+.quest{
+    @include res('padding-top', 120px);
+    @include res('padding-bottom', 160px);
+    position: relative;
+    @include media(576){
+        @include resa('padding-top', 70px);
+        @include resa('padding-bottom', 70px);
+    }
+    &__rect_1{
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include res('width', 137px);
+        @include res('height', 273px);
+        @include media(576){
+            display: none;
+        }
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__rect_2{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        @include res('width', 198px);
+        @include res('height', 433px);
+        @include media(576){
+            display: none;
+        }
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__title{
+        color: #111;
+        font-family: Geologica;
+        @include res('font-size', 56px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%;
+        @include res('max-width', 544px);
+        @include res('margin-bottom', 70px);
+        @include media(576){
+            @include resa('font-size', 32px);
+            @include resa('margin-bottom', 56px);
+            max-width: 100%;
+        }
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        @include res('gap', 24px);
+    }
+    &__left{
+        @include res('width', 424px);
+        @include res('min-width', 424px);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @include res('gap', 12px);
+    }
+    &__btn{
+        @include res('border-radius', 8px);
+        background: #F8F8F8;
+        color: #111;
+        @include res('font-size', 24px);
+        font-style: normal;
+        font-weight: 700;
+        text-align: left;
+        line-height: 125%;
+        @include res('padding-top', 15px);
+        @include res('padding-bottom', 15px);
+        @include res('padding-right', 24px);
+        @include res('padding-left', 24px);
+        transition: 300ms ease-out;
+        border: solid transparent;
+        @include res('border-width', 1px);
+        &.active{
+            border: solid #AA4B03;
+            color: #AA4B03;
+            @include res('border-width', 1px);
+        }
+    }
+    &__item{
+        display: none;
+        @include res('border-radius', 8px);
+        background: #F8F8F8;
+        @include res('padding-top', 48px);
+        @include res('padding-bottom', 40px);
+        @include res('padding-right', 40px);
+        @include res('padding-left', 40px);
+        &.active{
+            display: block;
+        }
+        &-title{
+            color: #AA4B03;
+            @include res('font-size', 24px);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 125%;
+            @include res('margin-bottom', 24px);
+        }
+        &-p{
+            color: #575D68;
+            @include res('font-size', 16px);
+            font-style: normal;
+            font-weight: 400;
+            @include res('margin-bottom', 40px);
+            @include res('line-height', 24px);
+        }
+        &-row{
+            display: flex;
+            @include res('gap', 24px);
+        }
+        &-img{
+            @include res('width', 248px);
+            @include res('height', 256px);
+            line-height: 0;
+            overflow: hidden;
+            @include res('border-radius', 8px);
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    &__button{
+        @include res('border-radius', 100px);
+        border: solid #096B61;
+        @include res('border-width', 1px);
+        @include res('height', 56px);
+        @include res('padding-left', 32px);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include res('gap', 16px);
+        width: max-content;
+        @include res('margin-top', 64px);
+        color: #096B61;
+        @include res('font-size', 16px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        svg{
+            @include res('width', 56px);
+            @include res('height', 56px);
+        }
+    }
+    &__lg{
+        @include media(576){
+            display: none;
+        }
+    }
+    &__sm{
+        display: none;
+    }
+    @include media(576){
+        // write here your code 
+        .quest{
+            &__sm{
+                display: block;
+            }
+
+        }
+    }
+}
