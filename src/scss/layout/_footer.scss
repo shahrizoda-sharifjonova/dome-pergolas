@@ -1,1 +1,147 @@
-// Футер
+.footer{
+    background: #002C27;
+    @include res('padding-top', 24px);
+    @include res('padding-bottom', 24px);
+    @include media(576){
+        @include resa('padding-top', 56px);
+        @include resa('padding-bottom', 24px);
+    }
+    &__top{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include media(576){
+            flex-direction: column;
+            justify-content: flex-start;
+            @include resa('gap', 40px);
+        }
+    }
+    &__logo{
+        @include res('width', 141px);
+        @include res('height', 36px);
+        @include media(576){
+            @include resa('width', 141px);
+            @include resa('height', 36px);
+        }
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include res('gap', 32px);
+        @include media(576){
+            flex-direction: column;
+            @include resa('gap', 8px);
+        }
+    }
+    &__link{
+        color: #FFF;
+        @include res('font-size', 16px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        @include media(576){
+            @include resa('font-size', 16px);
+        }
+    }
+    &__right{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        @include media(576){
+            align-items: center;
+        }
+    }
+    &__tel{
+        color: #FFF;
+        @include res('font-size', 16px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 116%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include res('gap', 8px);
+        @include media(576){
+            @include resa('font-size', 16px);
+            @include resa('gap', 8px);
+        }
+        &+.footer__tel{
+            @include res('margin-top', 8px);
+            @include media(576){
+                @include resa('margin-top', 8px);
+            }
+        }
+        svg{
+            @include res('width', 16px);
+            @include res('height', 16px);
+            @include media(576){
+                @include resa('width', 16px);
+                @include resa('height', 16px);
+            }
+        }
+    }
+    &__soc{
+        @include res('margin-top', 16px);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        @include res('gap', 16px);
+        @include media(576){
+            @include resa('margin-top', 16px);
+            @include resa('gap', 16px);
+        }
+        &-item{
+            @include res('width', 24px);
+            @include res('height', 24px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include media(576){
+                @include resa('width', 24px);
+                @include resa('height', 24px);
+            }
+            svg{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    &__bot{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        @include res('margin-top', 24px);
+        @include res('padding-top', 24px);
+        border-top: solid rgba(255, 255, 255, 0.40);
+        @include res('border-width', 1px);
+        @include res('gap', 25px);
+        @include media(576){
+            @include resa('margin-top', 24px);
+            @include resa('padding-top', 24px);
+            @include resa('border-width', 1px);
+            @include resa('gap', 8px);
+            flex-direction: column;
+            justify-content: center;
+        }
+        &-link{
+            color: #FFF;
+            font-size: 14px;
+            @include res('font-size', 14px);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 116%;
+            text-decoration-line: underline;
+            opacity: 0.7;
+            @include media(576){
+                @include resa('font-size', 14px);
+            }
+        }
+    }
+}
