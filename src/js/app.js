@@ -6,13 +6,25 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 
 const swiper = new Swiper();
 
-new Swiper(".options__swiper", {
+new Swiper(".reviews__swiper", {
     grabCursor: true,
     modules: [Pagination],
     slidesPerView: 1,
     watchSlidesProgress: true,
     pagination:{
         el: '.options__pagination',
+        clickable: true,
+    },
+}); 
+
+new Swiper(".reviews__swiper", {
+    grabCursor: true,
+    modules: [Pagination],
+    slidesPerView: 2,
+    spaceBetween: 24,
+    watchSlidesProgress: true,
+    pagination:{
+        el: '.reviews__pagination',
         clickable: true,
     },
 }); 

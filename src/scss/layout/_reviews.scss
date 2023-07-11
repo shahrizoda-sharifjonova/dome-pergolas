@@ -1,0 +1,133 @@
+.reviews{
+    @include res('padding-bottom', 120px);
+    &__title{
+        color: var(--1, #111);
+        font-family: Geologica;
+        @include res('font-size', 56px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%;
+        @include res('margin-bottom', 72px);
+        text-align: center;
+        position: relative;
+        width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+        &::before{
+            content: '';
+            position: absolute;
+            @include res('left', -64px);
+            @include res('bottom', 15px);
+            background: url(../img/reviews-heart.svg) center / cover no-repeat;
+            @include res('width', 40px);
+            @include res('height', 64px);
+        }
+    }
+    &__slider{
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    &__swiper{
+        width: 100%;
+        &-wrapper{
+            width: max-content;
+            display: flex;
+            align-items: stretch;
+        }
+    }
+    &__item{
+        @include res('border-radius', 16px);
+        background: #F8F8F8;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include res('padding', 32px);
+    }
+    &__top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include res('margin-bottom', 40px);
+    }
+    &__profile{
+        display: flex;
+        align-items: center;
+        &-img{
+            @include res('width', 64px);
+            @include res('margin-right', 8px);
+            img{
+                width: 100%;
+            }
+        }
+    }
+    &__name{
+        color: #111;
+        @include res('font-size', 16px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        @include res('margin-bottom', 8px);
+    }
+    &__date{
+        color: #3F3F3F;
+        @include res('font-size', 16px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &__rating{
+        display: flex;
+        align-items: center;
+        &-p{
+            color: #111;
+            @include res('font-size', 16px);
+            font-style: normal;
+            font-weight: 500;
+            line-height: 125%;
+            @include res('margin-right', 8px);
+        }
+        &-num{
+            @include res('padding-top', 2px);
+            @include res('padding-right', 9px);
+            @include res('padding-bottom', 2px);
+            @include res('padding-left', 9px);
+            color: var(--5, #FFF);
+            @include res('font-size', 17px);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 125%;
+            @include res('border-radius', 3px);
+            background: #AA4B03;
+        }
+    }
+    &__desc{
+        color: #3F3F3F;
+        @include res('font-size', 16px);
+        line-height: 140%;
+        font-style: normal;
+        font-weight: 400;
+        @include res('margin-bottom', 16px);
+    }
+    &__link{
+        @include res('font-size', 16px);
+        line-height: 120%;
+        font-style: normal;
+        font-weight: 600;
+        color: #096B61;
+        text-decoration: underline;
+        display: block;
+        @include res('margin-bottom', 32px);
+    }
+    &__img{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    &__buttons{
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+}

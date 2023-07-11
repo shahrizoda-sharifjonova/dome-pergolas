@@ -2064,7 +2064,6 @@
 
 .countries__title {
   color: #1C1C1C;
-  font-family: "Acme";
   font-size: 1.25vw;
   font-style: normal;
   font-weight: 400;
@@ -2076,7 +2075,6 @@
 
 .countries__title span {
   color: #AA4B03;
-  font-family: "Acme";
 }
 
 .countries__title span.bold {
@@ -2109,6 +2107,195 @@
 
 .countries__img img {
   width: 100%;
+}
+
+.reviews {
+  padding-bottom: 6.25vw;
+}
+
+.reviews__title {
+  color: var(--1, #111);
+  font-family: Geologica;
+  font-size: 2.9166666667vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%;
+  margin-bottom: 3.75vw;
+  text-align: center;
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reviews__title::before {
+  content: "";
+  position: absolute;
+  left: -3.3333333333vw;
+  bottom: 0.78125vw;
+  background: url(../img/reviews-heart.svg) center/cover no-repeat;
+  width: 2.0833333333vw;
+  height: 3.3333333333vw;
+}
+
+.reviews__slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.reviews__swiper {
+  width: 100%;
+}
+
+.reviews__swiper-wrapper {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.reviews__item {
+  border-radius: 0.8333333333vw;
+  background: #F8F8F8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.6666666667vw;
+}
+
+.reviews__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2.0833333333vw;
+}
+
+.reviews__profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reviews__profile-img {
+  width: 3.3333333333vw;
+  margin-right: 0.4166666667vw;
+}
+
+.reviews__profile-img img {
+  width: 100%;
+}
+
+.reviews__name {
+  color: #111;
+  font-size: 0.8333333333vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 0.4166666667vw;
+}
+
+.reviews__date {
+  color: #3F3F3F;
+  font-size: 0.8333333333vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.reviews__rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reviews__rating-p {
+  color: #111;
+  font-size: 0.8333333333vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%;
+  margin-right: 0.4166666667vw;
+}
+
+.reviews__rating-num {
+  padding-top: 0.1041666667vw;
+  padding-right: 0.46875vw;
+  padding-bottom: 0.1041666667vw;
+  padding-left: 0.46875vw;
+  color: var(--5, #FFF);
+  font-size: 0.8854166667vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%;
+  border-radius: 0.15625vw;
+  background: #AA4B03;
+}
+
+.reviews__desc {
+  color: #3F3F3F;
+  font-size: 0.8333333333vw;
+  line-height: 140%;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 0.8333333333vw;
+}
+
+.reviews__link {
+  font-size: 0.8333333333vw;
+  line-height: 120%;
+  font-style: normal;
+  font-weight: 600;
+  color: #096B61;
+  text-decoration: underline;
+  display: block;
+  margin-bottom: 1.6666666667vw;
+}
+
+.reviews__img {
+  width: 100%;
+}
+
+.reviews__img img {
+  width: 100%;
+}
+
+.reviews__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 * {
@@ -3184,15 +3371,10 @@ input[type=number] {
   }
 
   .countries__title {
-    font-family: Geologica;
     font-weight: 700;
     font-size: 5.5555555556vw;
     margin-bottom: 6.6666666667vw;
     max-width: 100%;
-  }
-
-  .countries__title span {
-    font-family: Geologica;
   }
 
   .countries__p {
