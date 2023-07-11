@@ -1,13 +1,75 @@
 .countries{
-    @include res('padding-top', 65px);
+    @include res('padding-top', 120px);
     @include res('padding-bottom',220px);
+    position: relative;
+    isolation: isolate;
+    @include media(575){
+        @include resa('padding-top', 72px);
+        @include resa('padding-bottom', 100px);
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        @include res('top', -48px);
+        @include res('right', 265px);
+        @include res('width', 444px);
+        @include res('height', 444px);
+        border-radius: 50%;
+        border: 4.167vw solid #FFEBDC;
+        z-index: -1;
+        @include media(575){
+            @include resa('top', -21px);
+            @include resa('right', -100px);
+            @include resa('width', 128px);
+            @include resa('height', 128px);
+            border: 6.4vw solid #FFEBDC;
+        }
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        display: none;
+        position: absolute;
+        @include resa('right', 16px);
+        @include resa('bottom', 250px);
+        @include resa('width', 130px);
+        @include resa('height', 130px);
+        border: 6.4vw solid #FFEBDC;
+        border-radius: 50%;
+        z-index: -1;
+        @include media(575){
+            display: block;
+        }
+    }
+    &__figure{
+        position: absolute;
+        right: 0;
+        @include res('bottom', 80px);
+        @include res('width', 1130px);
+        @include res('height', 410px);
+        background: url(../img/countries-figure.png) center / cover no-repeat;
+        z-index: -1;
+        @include media(575){
+            width: 100%;
+            @include resa('height', 150px);
+            @include resa('bottom', 40px);
+        }
+    }
     &__body{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include media(575){
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
     &__left{
         @include res('margin-right', 175px);
+        @include media(575){
+            margin-right: 0;
+            @include resa('margin-bottom', 40px);
+        }
     }
     &__title{
         color: #1C1C1C;
@@ -19,9 +81,19 @@
         @include res('margin-bottom', 32px);
         @include res('max-width', 560px);
         width: 100%;
+        @include media(575){
+            font-family: Geologica;
+            font-weight: 700;
+            @include resa('font-size', 20px);
+            @include resa('margin-bottom', 24px);
+            max-width: 100%;
+        }
         span{
             color: #AA4B03;
             font-family: 'Acme';
+            @include media(575){
+                font-family: Geologica;
+            }
             &.bold{
                 font-weight: 500;
             }
@@ -35,13 +107,28 @@
         font-weight: 400;
         @include res('max-width', 598px);
         width: 100%;
+        @include media(575){
+            @include resa('font-size', 16px);
+            max-width: 100%;
+        }
+        &.bold{
+            color: #111111;
+            font-weight: 700;
+        }
         &:not(:last-of-type){
             @include res('margin-bottom', 16px);
+            @include media(575){
+                @include resa('margin-bottom', 16px);
+            }
         }
     }
     &__img{
         @include res('min-width', 620px);
         @include res('width', 620px);
+        @include media(575){
+            width: 100%;
+            min-width: 100%;
+        }
         img{
             width: 100%;
         }
