@@ -107,6 +107,7 @@
         background: #FFF;
         margin-left: auto;
         margin-right: auto;
+        overflow: hidden;
         @include media(575){
             flex-direction: column;
             max-width: 100%;
@@ -221,10 +222,8 @@
         }
         img{
             width: 100%;
-            border-radius: 0 2.083vw 2.083vw 0;
             line-height: 0;
             @include media(575){
-                border-radius: 4.267vw 4.267vw 0 0;
             }
         }
     }

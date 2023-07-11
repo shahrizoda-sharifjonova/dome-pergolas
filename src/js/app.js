@@ -10,7 +10,6 @@ new Swiper(".options__swiper", {
     grabCursor: true,
     modules: [Pagination],
     slidesPerView: 1,
-    spaceBetween:30,
     watchSlidesProgress: true,
     pagination:{
         el: '.options__pagination',

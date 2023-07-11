@@ -1,0 +1,49 @@
+.countries{
+    @include res('padding-top', 65px);
+    @include res('padding-bottom',220px);
+    &__body{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__left{
+        @include res('margin-right', 175px);
+    }
+    &__title{
+        color: #1C1C1C;
+        font-family: 'Acme';
+        @include res('font-size', 24px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%;
+        @include res('margin-bottom', 32px);
+        @include res('max-width', 560px);
+        width: 100%;
+        span{
+            color: #AA4B03;
+            font-family: 'Acme';
+            &.bold{
+                font-weight: 500;
+            }
+        }
+    }
+    &__p{
+        color: #3F3F3F;
+        @include res('font-size', 16px);
+        line-height: 130%;
+        font-style: normal;
+        font-weight: 400;
+        @include res('max-width', 598px);
+        width: 100%;
+        &:not(:last-of-type){
+            @include res('margin-bottom', 16px);
+        }
+    }
+    &__img{
+        @include res('min-width', 620px);
+        @include res('width', 620px);
+        img{
+            width: 100%;
+        }
+    }
+}
