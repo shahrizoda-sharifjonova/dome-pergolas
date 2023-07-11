@@ -1,7 +1,22 @@
 .reviews{
     @include res('padding-bottom', 120px);
+    @include res('padding-top', 10px);
+    position: relative;
+    overflow: hidden;
     @include media(575){
         @include resa('padding-bottom', 72px);
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        @include res('left', -114px);
+        @include res('bottom', -90px);
+        @include res('width', 380px);
+        @include res('height', 483px);
+        background: url(../img/reviews-figure.svg) center / contain no-repeat;
+        @include media(575){
+            display: none;
+        }
     }
     &__title{
         color: var(--1, #111);
