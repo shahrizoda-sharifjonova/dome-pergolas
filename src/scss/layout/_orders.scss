@@ -2,6 +2,8 @@
     background: #002C27;
     @include res('padding-top', 120px);
     @include res('padding-bottom', 120px);
+    position: relative;
+    z-index: 1;
     @include media(575){
         @include resa('padding-top', 72px);
         @include resa('padding-bottom', 72px);
