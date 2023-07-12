@@ -218,10 +218,6 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
 .header {
   padding-top: 0.8333333333vw;
   padding-bottom: 0.8333333333vw;
@@ -3403,11 +3399,11 @@ input[type=number] {
   .quest .accordion__slider {
     width: 100%;
     overflow: hidden;
-    position: relative;
   }
 
   .quest .accordion .swiper {
     width: 100%;
+    position: relative;
   }
 
   .quest .accordion .swiper-wrapper {

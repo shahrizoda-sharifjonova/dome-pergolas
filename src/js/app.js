@@ -105,6 +105,7 @@ if(document.querySelector('.quest')){
         })
     })
 }
+
 $(document).ready(function() {
     $(".accordion > .accordion__button").on("click", function() {
       if ($(this).hasClass("active")) {

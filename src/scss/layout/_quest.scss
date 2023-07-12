@@ -228,10 +228,10 @@
             &__slider{
                 width: 100%;
                 overflow: hidden;
-                position: relative;
             }
             .swiper{
                 width: 100%;
+                position: relative;
                 &-wrapper{
                     display: flex;
                     width: max-content;
@@ -261,7 +261,7 @@
             }
             &__img{
                 width: 100%;
-                img{
+                img{ 
                     width: 100%;
                 }
             }
