@@ -1,0 +1,20 @@
+mixin form()
+    .form   
+        .form__body.container 
+            .form__rect 
+                .lg
+                    img(src="@img/form-rect.png", alt="" draggable="false")
+                .sm 
+                    img(src="@img/form-rect-sm.png", alt="" draggable="false")
+            h2.form__title Остались вопросы?
+            p.form__p Оставьте заявку, и наш менеджер свяжется с вами #[span в течение 1 часа]
+            form(action="#").form__content  
+                .form__col  
+                    p.form__label Ваше имя
+                    input(type="text" placeholder="Иван Иванов").form__input 
+                .form__col  
+                    p.form__label Ваш телефон
+                    input(type="text" placeholder="+7 000 123 45 67").form__input 
+                .form__last   
+                    button(type="submit").form__btn Отправить
+                    p.form__desc Нажимая на кнопку «Отправить», вы соглашаетесь с политикой #[a(href="#!") конфиденциальности]
