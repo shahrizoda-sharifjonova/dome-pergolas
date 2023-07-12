@@ -74,3 +74,22 @@ openbtns.forEach(openBtn =>{
         document.querySelector(target).classList.add('active');
     })
 })
+
+if(document.querySelector('.quest')){
+    const buttons = document.querySelectorAll('.quest__btn');
+    const items = document.querySelectorAll('.quest__item');
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            buttons.forEach(btn => {
+                btn.classList.remove('active')
+            })
+            btn.classList.add('active')
+            const target = btn.getAttribute('data-target')
+            const el = document.querySelector(`#${target}`);
+            items.forEach(item => {
+                item.classList.remove('active')
+            })
+            el.classList.add('active')
+        })
+    })
+}
