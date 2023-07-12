@@ -1,4 +1,5 @@
 import * as functions from "./modules/functions.js";
+import $ from 'jquery'
 
 functions.isWebp();
 
@@ -32,6 +33,17 @@ new Swiper(".reviews__swiper", {
             slidesPerView: 2,
         }
     }
+}); 
+
+new Swiper(".accordion__swiper", {
+    grabCursor: true,
+    modules: [Pagination],
+    slidesPerView: 1,
+    watchSlidesProgress: true,
+    pagination:{
+        el: '.accordion__pagination',
+        clickable: true,
+    },
 }); 
 
 const menu = document.querySelector('.menu')
@@ -78,7 +90,7 @@ openbtns.forEach(openBtn =>{
 if(document.querySelector('.quest')){
     const buttons = document.querySelectorAll('.quest__btn');
     const items = document.querySelectorAll('.quest__item');
-    buttons.forEach(btn => {
+    buttons.forEach(btn => { 
         btn.addEventListener('click', () => {
             buttons.forEach(btn => {
                 btn.classList.remove('active')
@@ -93,3 +105,20 @@ if(document.querySelector('.quest')){
         })
     })
 }
+$(document).ready(function() {
+    $(".accordion > .accordion__button").on("click", function() {
+      if ($(this).hasClass("active")) {
+        $(this).removeClass("active");
+        $(this)
+          .siblings(".accordion__content")
+          .slideUp(200);
+      } else {
+        $(".accordion > .accordion__button").removeClass("active");
+        $(this).addClass("active");
+        $(".accordion__content").slideUp(200);
+        $(this)
+          .siblings(".accordion__content")
+          .slideDown(200);
+      }
+    });
+  });
