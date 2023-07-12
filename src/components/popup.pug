@@ -1,0 +1,15 @@
+mixin popup()
+    .popup
+        .popup__bg 
+        form(action="").popup__body 
+            h2.popup__title Укажите контакты для связи
+            .popup__item 
+                p.popup__subtitle Ваше имя #[span *]
+                input(type="text" placeholder="Ваше имя" required).popup__input
+            .popup__item 
+                p.popup__subtitle Ваш телефон #[span *]
+                input(type="number" placeholder="Ваш телефон" required).popup__input
+            .popup__row 
+                input(type="checkbox" name="popupCheckbox" id="checkbox10").popup__checkbox.sm
+                label(for="checkbox10" required).popup__label Нажимая кнопку «Отправить», вы соглашаетесь с условиями Политики конфиденциальности 
+            button(type="submit").popup__btn Отправить

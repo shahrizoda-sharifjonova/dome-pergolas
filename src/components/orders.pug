@@ -1,5 +1,5 @@
 mixin orders()
-    .orders 
+    .orders#orders
         .orders__body.container 
             .orders__wrapper
                 .orders__left 
@@ -21,31 +21,38 @@ mixin orders()
                                 .progress-bar-container 
                                     div(data-value="1/5" style="--progress-value: 20").progress-bar.html
                             .orders__items 
-                                .orders__item 
+                                .orders__item
+                                    input(type="radio" name="projectsRadio" id="radio1").orders__radio
                                     .orders__img    
                                         img(src="@img/orders-1.png", alt="" draggable="false")
                                     p.orders__name Купол d 4 м
-                                .orders__item 
+                                .orders__item
+                                    input(type="radio" name="projectsRadio" id="radio2").orders__radio
                                     .orders__img    
                                         img(src="@img/orders-2.png", alt="" draggable="false")
                                     p.orders__name Купол d 5 м
-                                .orders__item 
+                                .orders__item
+                                    input(type="radio" name="projectsRadio" id="radio3").orders__radio
                                     .orders__img    
                                         img(src="@img/orders-3.png", alt="" draggable="false")
                                     p.orders__name Купол Aqua
-                                .orders__item 
+                                .orders__item
+                                    input(type="radio" name="projectsRadio" id="radio4").orders__radio
                                     .orders__img    
                                         img(src="@img/orders-4.png", alt="" draggable="false")
                                     p.orders__name Купол d 6 м
-                                .orders__item 
+                                .orders__item
+                                    input(type="radio" name="projectsRadio" id="radio5").orders__radio
                                     .orders__img    
                                         img(src="@img/orders-5.png", alt="" draggable="false")
                                     p.orders__name Купол d 2,5 м
-                                .orders__item 
+                                .orders__item
+                                    input(type="radio" name="projectsRadio" id="radio6").orders__radio
                                     .orders__img    
                                         img(src="@img/orders-6.png", alt="" draggable="false")
                                     p.orders__name Купол Ellipse Avto
-                                .orders__item 
+                                .orders__item
+                                    input(type="radio" name="projectsRadio" id="radio7").orders__radio
                                     .orders__img    
                                         img(src="@img/orders-7.png", alt="" draggable="false")
                                     p.orders__name Купол Ellipse Cafe
