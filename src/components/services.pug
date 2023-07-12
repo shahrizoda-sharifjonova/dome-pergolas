@@ -2,6 +2,8 @@ mixin services()
     .services 
         .services__body.container 
             h2.services__title Дополнительное оснащение и услуги
+            .services__img.enable-sm 
+                img(src="@img/services-img.png", alt="" draggable="false")
             .services__row 
                 .services__arrow 
                     img(src="@img/arrow-down-left.svg", alt="" draggable="false")
@@ -11,7 +13,7 @@ mixin services()
                 .services__left     
                     .services__item.left1     
                         p.services__subtitle Люстра
-                        p.services__p Хрусталь 6-10 ламп
+                        p.services__p Хрусталь 6-10 ламп 
                     .services__item.left2     
                         p.services__subtitle Гирлянда
                         p.services__p Уличного типа Belt-light
@@ -24,7 +26,7 @@ mixin services()
                     .services__item.left5     
                         p.services__subtitle Деревянный подиум 
                         p.services__p Шестигранной формы на сваях
-                .services__img 
+                .services__img.disable-sm 
                     img(src="@img/services-img.png", alt="" draggable="false")
                 .services__right 
                     .services__item.right1     
