@@ -68,6 +68,7 @@
     &__close{
         position: absolute;
         top: 0;
+        cursor: pointer;
         @include res('right', -56px);
         @include res('width', 40px);
         @include res('height', 40px);

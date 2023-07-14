@@ -3277,6 +3277,7 @@ input::-webkit-inner-spin-button {
 .popup__close {
   position: absolute;
   top: 0;
+  cursor: pointer;
   right: -2.9166666667vw;
   width: 2.0833333333vw;
   height: 2.0833333333vw;
