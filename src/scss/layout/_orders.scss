@@ -271,6 +271,7 @@
     }
     &__item{
         width: calc(25% - 0.391vw);
+        position: relative;
         @include media(575){
             width: calc(33.333% - 1.422vw);
         }
@@ -307,6 +308,20 @@
             }
         }
     }
+    &__radio{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;    
+        &:checked ~ .orders__img{
+            border: solid #AA4B03;
+            @include res('border-width', 2px);
+        }
+        &:checked ~ .orders__name{
+            font-weight: 600;
+        }
+    }
     &__img{
         width: 100%;
         border: 0.052vw solid #CBCBCB;
@@ -316,7 +331,8 @@
         @include media(575){
             @include resa('margin-bottom', 20px);
             @include resa('border-radius', 5px);
-            border: 0.267vw solid #CBCBCB;
+            border: solid transparent;
+            @include res('border-width', 2px);
         }
         img{
             width: 100%;
@@ -359,6 +375,7 @@
         @include res('padding-left', 32px);
         @include res('border-radius', 100px);
         border: 0.052vw solid #111;
+        @include res('height', 56px);
         @include media(575){
             width: 100%;
             @include resa('padding-top', 16px);
@@ -368,6 +385,7 @@
             @include resa('font-size', 16px);
             @include resa('border-radius', 100px);
             @include resa('margin-bottom', 16px);
+            @include resa('height', 56px);
         }
     }
     &__btn{
@@ -383,6 +401,7 @@
         font-weight: 500;
         line-height: normal;
         @include res('border-radius', 100px);
+        @include res('height', 56px);
         background: linear-gradient(323deg, #096B61 0%, #1CAB9C 100%);
         @include media(575){
             width: 100%;
@@ -392,6 +411,7 @@
             @include resa('padding-left', 32px);
             @include resa('font-size', 16px);
             @include resa('border-radius', 100px);
+            @include resa('height', 56px);
         }
         &.sb{
             @include res('max-width', 260px);

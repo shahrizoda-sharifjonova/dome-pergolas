@@ -5,6 +5,7 @@
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
     font-family: 'Manrope', sans-serif;
+    scroll-behavior: smooth;
     &:focus,
     &:active{
         outline: none;
@@ -60,6 +61,6 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-input[type=number] {
-  -moz-appearance: textfield;
-}
+// input[type=number] {
+//   -moz-appearance: textfield;
+// }

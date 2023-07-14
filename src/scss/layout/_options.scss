@@ -191,6 +191,7 @@
                 @include res('border-radius', 100px);
                 background: rgba(255, 255, 255, 0.80);
                 backdrop-filter: blur(0.417vw);
+                transition: 300ms ease-out;
                 @include media(575){
                     @include resa('width', 24px);
                     @include resa('border-radius', 100px);

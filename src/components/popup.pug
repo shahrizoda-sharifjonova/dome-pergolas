@@ -1,0 +1,52 @@
+mixin popup()
+    .popup#callback 
+        .popup__bg.popup-close  
+        form(action="").popup__body 
+            .popup__close.popup-close
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.16382 9.50325L30.4972 32.8366C30.7896 33.1582 31.1989 33.3337 31.6667 33.3337C32.5732 33.3337 33.3334 32.5734 33.3334 31.667C33.3334 31.1992 33.158 30.7898 32.8363 30.4974L9.50301 7.16407C9.21061 6.84243 8.80125 6.66699 8.33341 6.66699C7.42698 6.66699 6.66675 7.42723 6.66675 8.33366C6.66675 8.80149 6.84219 9.21085 7.16382 9.50325ZM30.4972 7.16407L7.16382 30.4974C6.84219 30.7898 6.66675 31.1992 6.66675 31.667C6.66675 32.5734 7.42698 33.3337 8.33341 33.3337C8.80125 33.3337 9.21061 33.1582 9.50301 32.8366L32.8363 9.50325C33.158 9.21085 33.3334 8.80149 33.3334 8.33366C33.3334 7.42723 32.5732 6.66699 31.6667 6.66699C31.1989 6.66699 30.7896 6.84243 30.4972 7.16407Z" fill="white"/>
+                </svg>
+            h2.popup__title Укажите контакты для связи
+            .popup__item 
+                p.popup__subtitle Ваше имя #[span *]
+                input(type="text" placeholder="Ваше имя" required).popup__input
+            .popup__item 
+                p.popup__subtitle Ваш телефон #[span *]
+                input(type="number" placeholder="Ваш телефон" required).popup__input
+            .popup__row 
+                input(type="checkbox" name="popupCheckbox" id="checkbox10").popup__checkbox.sm
+                label(for="checkbox10" required).popup__label Нажимая кнопку «Отправить», вы соглашаетесь с условиями Политики конфиденциальности 
+            button(type="submit").popup__btn Отправить
+    .popup#formpopup  
+        .popup__bg.popup-close  
+        .popup__track 
+            .popup__close.popup_2__close.popup-close
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.16382 9.50325L30.4972 32.8366C30.7896 33.1582 31.1989 33.3337 31.6667 33.3337C32.5732 33.3337 33.3334 32.5734 33.3334 31.667C33.3334 31.1992 33.158 30.7898 32.8363 30.4974L9.50301 7.16407C9.21061 6.84243 8.80125 6.66699 8.33341 6.66699C7.42698 6.66699 6.66675 7.42723 6.66675 8.33366C6.66675 8.80149 6.84219 9.21085 7.16382 9.50325ZM30.4972 7.16407L7.16382 30.4974C6.84219 30.7898 6.66675 31.1992 6.66675 31.667C6.66675 32.5734 7.42698 33.3337 8.33341 33.3337C8.80125 33.3337 9.21061 33.1582 9.50301 32.8366L32.8363 9.50325C33.158 9.21085 33.3334 8.80149 33.3334 8.33366C33.3334 7.42723 32.5732 6.66699 31.6667 6.66699C31.1989 6.66699 30.7896 6.84243 30.4972 7.16407Z" fill="white"/>
+                </svg>
+            .popup__body.big 
+                .popup_2__row 
+                    .popup__slider 
+                        .popup__swiper.swiper 
+                            .popup__wrapper.swiper-wrapper 
+                                .popup__slide.swiper-slide  
+                                    img(src="@img/intro-img.png", alt="" draggable="false") 
+                                .popup__slide.swiper-slide  
+                                    img(src="@img/intro-img.png", alt="" draggable="false") 
+                                .popup__slide.swiper-slide 
+                                    img(src="@img/intro-img.png", alt="" draggable="false") 
+                            .popup__pagination.swiper-pagination 
+                    .popup__info 
+                        p.popup_2__title Купольная беседка «Купол mini»
+                        p.popup_2__sub Характеристики:
+                        p.popup_2__info #[span Площадь:] от 4,9 м2 до 7 м.
+                        p.popup_2__info #[span Диаметр:] от 2,5 до 3 м.
+                        p.popup_2__info #[span Высота:] от 2,3 до 2.5 м.
+                        p.popup_2__info #[span Вместимость:] до 6 чел.
+                        p.popup_2__info #[span Вход:] сдвижная дверь
+                        p.popup_2__info #[span Каркас:] металлический профиль
+                        p.popup_2__info #[span Покрытие:] монолитный поликарбонат
+                        p.popup_2__info #[span Покраска каркаса:] порошковая
+                        p.popup_2__info #[span Венттиляция:] турбодефлектор
+                        p.popup_2__price от 163 000 ₽
+                        button(type='button' data-target="callback").popup_2__btn.open-popup Заказать

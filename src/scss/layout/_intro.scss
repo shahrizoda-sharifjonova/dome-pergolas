@@ -121,6 +121,9 @@
             @include resa('padding-bottom', 16px);
             @include resa('padding-left', 32px);
             @include resa('border-radius', 100px);
+            &.enable-sm{
+                display: flex !important;
+            }
         }
         svg{
             @include res('margin-left', 16px);
@@ -134,12 +137,25 @@
                 @include resa('height', 24px);
             }
         }
+        &.enable-sm{
+            display: none;
+            @include media(575){
+                display: block;
+            }
+        }
+        &.disable-sm{
+            @include media(575){
+                display: none;
+            }
+        }
     }
-    &__img{
-        @include res('width', 648px);
+    &__slider{
+        @include res('max-width', 648px);
+        width: 100%;
+        position: relative;
+        overflow: hidden;
         @include media(575){
-            width: 100%;
-            @include resa('margin-bottom', 40px);
+            max-width: 100%;
         }
         &.enable-sm{
             display: none;
@@ -151,6 +167,20 @@
             @include media(575){
                 display: none;
             }
+        }
+    }
+    .swiper{
+        width: 100%;
+        &-wrapper{
+            display: flex;
+            width: max-content;
+        }
+    }
+    &__img{
+        @include res('width', 648px);
+        @include media(575){
+            width: 100%;
+            @include resa('margin-bottom', 40px);
         }
         img{
             width: 100%;
@@ -169,12 +199,13 @@
             display: none;
         }
     }
-    &__subtitle{
+&__subtitle{
         color: #000;
         @include res('font-size', 24px);
         font-style: normal;
         font-weight: 500;
         line-height: 135%;
+        text-align: left;
     }
     &__button{
         display: flex;
@@ -185,7 +216,7 @@
         font-style: normal;
         font-weight: 400;
         line-height: 135%;
-        svg{
+        img{
             @include res('margin-left', 16px);
             @include res('min-width', 48px);
             @include res('width', 48px);

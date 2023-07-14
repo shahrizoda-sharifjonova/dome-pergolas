@@ -100,10 +100,11 @@
             @include resa('height', 373px);
             @include resa('border-radius', 10px);
         }
-        img,iframe{
+        img,iframe,&>div{
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border: none;
         }
     }
 }

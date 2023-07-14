@@ -170,6 +170,7 @@
         @include res('font-size', 16px);
         line-height: 120%;
         font-style: normal;
+        text-align: left;
         font-weight: 400;
         @include res('margin-bottom', 16px);
         @include media(575){
